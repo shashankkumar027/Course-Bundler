@@ -30,7 +30,7 @@ const CoursePage = ({ user }) => {
         <Loader />
       ) : (
         <>
-          <Metadata title={lectures && lectures[lectureNumber].title} />
+          <Metadata title={lectures && lectures.length > 0 && lectures[lectureNumber].title} />
           <Grid minH={'90vh'} templateColumns={['1fr', '3fr 1fr']}>
             {lectures && lectures.length > 0 ? (
               <>
